@@ -125,42 +125,28 @@ var emptyTestClientModel =
             SendRequest(httpMethod, uri, headers, requestBody, function (httpRequest) {
                 var httpResponse = getHttpResponse(httpRequest);
                 self.response(httpResponse);
-                $("#testClientResponseDialog").dialog("open");
+                $("#testClientResponseDialog").modal('show');
             });
         };
 
-        $("#testClientDialog").dialog({
-            autoOpen: false,
-            height: "auto",
-            width: "700",
-            modal: true,
-            open: function () {
-                jQuery('.ui-widget-overlay').bind('click', function () {
-                    jQuery('#testClientDialog').dialog('close');
-                })
-            },
-            buttons: {
-                "Send": function () {
+        $(document).ready(function () {
+            jQuery.noConflict();
+            $("#modalTestClient").modal({
+                keyboard: false,
+                show: false
+            }).find('.callback-btn').off('click.callback')
+                .on('click.callback', function () {
                     self.sendRequest();
-                }
-            }
+                    $("#modalTestClient").modal('hide');
+                }).end()
+
+            $("#testClientResponseDialog").modal({
+                keyboard: false,
+                show: false
+            })
         });
 
-        $("#testClientResponseDialog").dialog({
-            autoOpen: false,
-            height: "auto",
-            width: "550",
-            modal: true,
-            open: function () {
-                jQuery('.ui-widget-overlay').bind('click', function () {
-                    jQuery('#testClientResponseDialog').dialog('close');
-                })
-            }
-        });
 
-        $("#testClientButton").click(function () {
-            $("#testClientDialog").dialog("open");
-        });
     }
 
     // Initiate the Knockout bindings
@@ -196,7 +182,7 @@ function SendRequest(httpMethod, url, requestHeaders, requestBody, handleRespons
 
     var httpRequest = new XMLHttpRequest();
     try {
-        httpRequest.open(httpMethod, encodeURI(url), false);
+        httpRequest.open(httpMethod, encodeURI(url), true);
     }
     catch (e) {
         alert("Cannot send request. Check the security setting of your browser if you are sending request to a different domain.");

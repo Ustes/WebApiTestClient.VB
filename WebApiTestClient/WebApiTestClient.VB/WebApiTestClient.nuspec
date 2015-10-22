@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>WebApiTestClient.VB</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>A Simple Test Client for ASP.NET Web API</title>
-        <authors>yaohuang</authors>
+        <authors>Ustes, yaohuang</authors>
         <owners>Ustes G</owners>
         <projectUrl>https://github.com/yaohuang/WebApiTestClient</projectUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -14,9 +14,9 @@
         <language>en-US</language>
         <tags>ASP.NET Web API Test Client</tags>
         <dependencies>
-          <dependency id="Microsoft.AspNet.WebApi.HelpPage" version="5.2.3" />
+          <dependency id="Microsoft.AspNet.WebApi.HelpPage.VB" version="5.2.3" />
           <dependency id="knockoutjs" version="2.2.0" />
-          <dependency id="jQuery.UI.Combined" version="1.9.2" />
+          <dependency id="Bootstrap" version="3.3.5" />
         </dependencies>
     </metadata>
     <files>

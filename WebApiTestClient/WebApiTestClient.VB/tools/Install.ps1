@@ -6,11 +6,22 @@ if($file) {
     $file.Document.Selection.StartOfDocument()
 	if(!$file.Document.MarkText("@Html.DisplayForModel(`"TestClientDialogs`")"))
 	{
-		$file.Document.ReplaceText("@Html.DisplayForModel()`n</section>`n</div>", "@Html.DisplayForModel()`n @Html.DisplayForModel(`"TestClientDialogs`")`n </section>`n`n</div>`n @section Scripts `n @Html.DisplayForModel(`"TestClientReferences`") `n End Section")
-		$file.Save()
+		$file.Document.ReplaceText("@Html.DisplayForModel()", "@Html.DisplayForModel()`n @Html.DisplayForModel(`"TestClientDialogs`")`n ")
 	}
 	else
 	{
 		$file.Document.ClearBookmarks()
 	}
+
+	$file.Document.Selection.EndOfDocument()
+	if(!$file.Document.MarkText("@Html.DisplayForModel(`"TestClientReferences`")")){
+		$file.Document.Selection.Insert("@section Scripts`n@Html.DisplayForModel(`"TestClientReferences`")`nEnd Section")
+	}
+
+
+
+	$file.Save()
+
+
+
 }

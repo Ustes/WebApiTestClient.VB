@@ -1,0 +1,5 @@
+U:\_TFS\Workspaces\u3tech\WebApiTestClient\WebApiTestClient.VB\obj\Debug\WebApiTestClient.VB.pdb
+U:\_TFS\Workspaces\u3tech\WebApiTestClient\WebApiTestClient.VB\obj\Debug\WebApiTestClient.VB.dll
+U:\_TFS\Workspaces\u3tech\WebApiTestClient\WebApiTestClient.VB\bin\Debug\WebApiTestClient.VB.dll
+U:\_TFS\Workspaces\u3tech\WebApiTestClient\WebApiTestClient.VB\bin\Debug\WebApiTestClient.VB.pdb
+U:\_TFS\Workspaces\u3tech\WebApiTestClient\WebApiTestClient.VB\obj\Debug\WebApiTestClient.VB.vbprojResolveAssemblyReference.cache
