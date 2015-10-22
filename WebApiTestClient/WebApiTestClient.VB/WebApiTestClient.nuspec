@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>WebApiTestClient.VB</id>
+        <version>1.0.0</version>
+        <title>A Simple Test Client for ASP.NET Web API</title>
+        <authors>yaohuang</authors>
+        <owners>Ustes G</owners>
+        <projectUrl>https://github.com/yaohuang/WebApiTestClient</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <licenseUrl>https://github.com/yaohuang/WebApiTestClient/blob/master/LICENSE.md</licenseUrl>
+        <description>A simple Test Client built on top of ASP.NET Web API Help Page.</description>
+        <summary>A simple Test Client built on top of ASP.NET Web API Help Page.</summary>
+        <language>en-US</language>
+        <tags>ASP.NET Web API Test Client</tags>
+        <dependencies>
+          <dependency id="Microsoft.AspNet.WebApi.HelpPage" version="5.2.3" />
+          <dependency id="knockoutjs" version="2.2.0" />
+          <dependency id="jQuery.UI.Combined" version="1.9.2" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.vbhtml.pp" target="content\Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.vbhtml.pp" />
+        <file src="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.vbhtml" target="content\Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.vbhtml" />
+        <file src="Areas\HelpPage\TestClient.css" target="content\Areas\HelpPage\TestClient.css" />
+        <file src="Scripts\WebApiTestClient.js" target="content\Scripts\WebApiTestClient.js" />
+        <file src="tools\install.ps1" target="tools\install.ps1" />
+        <file src="tools\uninstall.ps1" target="tools\uninstall.ps1" />
+        <file src="readme.txt" target="readme.txt" />
+    </files>
+</package>
