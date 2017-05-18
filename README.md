@@ -11,6 +11,12 @@ http://blogs.msdn.com/b/yaohuang1/archive/2012/12/04/10373804.aspx
 Get it on NuGet.org
 Install-Package WebApiTestClient.VB
 
+Open the file Api.cshtml (under Areas\HelpPage\Views\Help) and add the following:
+@Html.DisplayForModel("TestClientDialogs") 
+@Html.DisplayForModel("TestClientReferences") 
+Note that you add the @Html.DisplayForModel("TestClientDialogs") after the <div> and @Html.DisplayForModel("TestClientReferences") inside the Scripts section.
+
+
 I eventually want to swap out jquery-ui for bootstrap.
 
 
